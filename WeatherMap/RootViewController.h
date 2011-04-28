@@ -10,6 +10,7 @@
 
 @interface RootViewController : UITableViewController {
 
+    MKmapview
 }
 
 
