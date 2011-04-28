@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F6F2A311369F50400B96337 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6F2A301369F50400B96337 /* UIKit.framework */; };
+		0F6F2A331369F50400B96337 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6F2A321369F50400B96337 /* Foundation.framework */; };
+		0F6F2A351369F50400B96337 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6F2A341369F50400B96337 /* CoreGraphics.framework */; };
+		0F6F2A3B1369F50400B96337 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F2A391369F50400B96337 /* InfoPlist.strings */; };
+		0F6F2A3E1369F50400B96337 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F2A3D1369F50400B96337 /* main.m */; };
+		0F6F2A411369F50400B96337 /* WeatherMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F2A401369F50400B96337 /* WeatherMapAppDelegate.m */; };
+		0F6F2A441369F50400B96337 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F2A421369F50400B96337 /* MainWindow.xib */; };
+		0F6F2A471369F50400B96337 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F2A461369F50400B96337 /* RootViewController.m */; };
+		0F6F2A4A1369F50400B96337 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F2A481369F50400B96337 /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F6F2A2C1369F50400B96337 /* WeatherMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F6F2A301369F50400B96337 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0F6F2A321369F50400B96337 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0F6F2A341369F50400B96337 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0F6F2A381369F50400B96337 /* WeatherMap-Info.plist */ = {isa = PBXFileReference; path = "WeatherMap-Info.plist"; sourceTree = "<group>"; };
+		0F6F2A3A1369F50400B96337 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0F6F2A3C1369F50400B96337 /* WeatherMap-Prefix.pch */ = {isa = PBXFileReference; path = "WeatherMap-Prefix.pch"; sourceTree = "<group>"; };
+		0F6F2A3D1369F50400B96337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F6F2A3F1369F50400B96337 /* WeatherMapAppDelegate.h */ = {isa = PBXFileReference; path = WeatherMapAppDelegate.h; sourceTree = "<group>"; };
+		0F6F2A401369F50400B96337 /* WeatherMapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherMapAppDelegate.m; sourceTree = "<group>"; };
+		0F6F2A431369F50400B96337 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		0F6F2A451369F50400B96337 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		0F6F2A461369F50400B96337 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		0F6F2A491369F50400B96337 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F6F2A291369F50400B96337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6F2A311369F50400B96337 /* UIKit.framework in Frameworks */,
+				0F6F2A331369F50400B96337 /* Foundation.framework in Frameworks */,
+				0F6F2A351369F50400B96337 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F6F2A211369F50400B96337 = {
+			isa = PBXGroup;
+			children = (
+				0F6F2A361369F50400B96337 /* WeatherMap */,
+				0F6F2A2F1369F50400B96337 /* Frameworks */,
+				0F6F2A2D1369F50400B96337 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F6F2A2D1369F50400B96337 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F6F2A2C1369F50400B96337 /* WeatherMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F6F2A2F1369F50400B96337 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F6F2A301369F50400B96337 /* UIKit.framework */,
+				0F6F2A321369F50400B96337 /* Foundation.framework */,
+				0F6F2A341369F50400B96337 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F6F2A361369F50400B96337 /* WeatherMap */ = {
+			isa = PBXGroup;
+			children = (
+				0F6F2A3F1369F50400B96337 /* WeatherMapAppDelegate.h */,
+				0F6F2A401369F50400B96337 /* WeatherMapAppDelegate.m */,
+				0F6F2A421369F50400B96337 /* MainWindow.xib */,
+				0F6F2A451369F50400B96337 /* RootViewController.h */,
+				0F6F2A461369F50400B96337 /* RootViewController.m */,
+				0F6F2A481369F50400B96337 /* RootViewController.xib */,
+				0F6F2A371369F50400B96337 /* Supporting Files */,
+			);
+			path = WeatherMap;
+			sourceTree = "<group>";
+		};
+		0F6F2A371369F50400B96337 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F6F2A381369F50400B96337 /* WeatherMap-Info.plist */,
+				0F6F2A391369F50400B96337 /* InfoPlist.strings */,
+				0F6F2A3C1369F50400B96337 /* WeatherMap-Prefix.pch */,
+				0F6F2A3D1369F50400B96337 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F6F2A2B1369F50400B96337 /* WeatherMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F6F2A4D1369F50400B96337 /* Build configuration list for PBXNativeTarget "WeatherMap" */;
+			buildPhases = (
+				0F6F2A281369F50400B96337 /* Sources */,
+				0F6F2A291369F50400B96337 /* Frameworks */,
+				0F6F2A2A1369F50400B96337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeatherMap;
+			productName = WeatherMap;
+			productReference = 0F6F2A2C1369F50400B96337 /* WeatherMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F6F2A231369F50400B96337 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 0F6F2A261369F50400B96337 /* Build configuration list for PBXProject "WeatherMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0F6F2A211369F50400B96337;
+			productRefGroup = 0F6F2A2D1369F50400B96337 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F6F2A2B1369F50400B96337 /* WeatherMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F6F2A2A1369F50400B96337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6F2A3B1369F50400B96337 /* InfoPlist.strings in Resources */,
+				0F6F2A441369F50400B96337 /* MainWindow.xib in Resources */,
+				0F6F2A4A1369F50400B96337 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F6F2A281369F50400B96337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F6F2A3E1369F50400B96337 /* main.m in Sources */,
+				0F6F2A411369F50400B96337 /* WeatherMapAppDelegate.m in Sources */,
+				0F6F2A471369F50400B96337 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0F6F2A391369F50400B96337 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F6F2A3A1369F50400B96337 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0F6F2A421369F50400B96337 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F6F2A431369F50400B96337 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		0F6F2A481369F50400B96337 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F6F2A491369F50400B96337 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F6F2A4B1369F50400B96337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0F6F2A4C1369F50400B96337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		0F6F2A4E1369F50400B96337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeatherMap/WeatherMap-Prefix.pch";
+				INFOPLIST_FILE = "WeatherMap/WeatherMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0F6F2A4F1369F50400B96337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WeatherMap/WeatherMap-Prefix.pch";
+				INFOPLIST_FILE = "WeatherMap/WeatherMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F6F2A261369F50400B96337 /* Build configuration list for PBXProject "WeatherMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F6F2A4B1369F50400B96337 /* Debug */,
+				0F6F2A4C1369F50400B96337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F6F2A4D1369F50400B96337 /* Build configuration list for PBXNativeTarget "WeatherMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F6F2A4E1369F50400B96337 /* Debug */,
+				0F6F2A4F1369F50400B96337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F6F2A231369F50400B96337 /* Project object */;
+}
