@@ -23,14 +23,14 @@
 		0F6F2A301369F50400B96337 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0F6F2A321369F50400B96337 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0F6F2A341369F50400B96337 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0F6F2A381369F50400B96337 /* WeatherMap-Info.plist */ = {isa = PBXFileReference; path = "WeatherMap-Info.plist"; sourceTree = "<group>"; };
+		0F6F2A381369F50400B96337 /* WeatherMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WeatherMap-Info.plist"; sourceTree = "<group>"; };
 		0F6F2A3A1369F50400B96337 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0F6F2A3C1369F50400B96337 /* WeatherMap-Prefix.pch */ = {isa = PBXFileReference; path = "WeatherMap-Prefix.pch"; sourceTree = "<group>"; };
+		0F6F2A3C1369F50400B96337 /* WeatherMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeatherMap-Prefix.pch"; sourceTree = "<group>"; };
 		0F6F2A3D1369F50400B96337 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0F6F2A3F1369F50400B96337 /* WeatherMapAppDelegate.h */ = {isa = PBXFileReference; path = WeatherMapAppDelegate.h; sourceTree = "<group>"; };
+		0F6F2A3F1369F50400B96337 /* WeatherMapAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherMapAppDelegate.h; sourceTree = "<group>"; };
 		0F6F2A401369F50400B96337 /* WeatherMapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherMapAppDelegate.m; sourceTree = "<group>"; };
 		0F6F2A431369F50400B96337 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		0F6F2A451369F50400B96337 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		0F6F2A451369F50400B96337 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		0F6F2A461369F50400B96337 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0F6F2A491369F50400B96337 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
