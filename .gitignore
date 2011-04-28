@@ -1,2 +1,6 @@
 WeatherMap.xcodeproj/project.xcworkspace
 WeatherMap.xcodeproj/xcuserdata
+WeatherMap.xcodeproj/*.perspectivev3
+WeatherMap.xcodeproj/*.pbxuser
+.DS_Store
+build/
