@@ -146,7 +146,13 @@
     // the detail view does not want a toolbar so hide it
    // [self.navigationController setToolbarHidden:YES animated:NO];
     
-    [self.navigationController pushViewController:weatherView animated:YES];
+	NSLog(@"Annotation Click");
+	self.weatherView.title=((UIButton*)sender).currentTitle;
+	self.weatherView.zipcode=((UIButton*)sender).currentTitle;
+	[self.navigationController pushViewController:self.weatherView animated:YES];
+	
+	//self.weatherView.title=((UIButton*)sender).currentTitle;
+    //[self.navigationController pushViewController:weatherView animated:YES];
 }
 
 
@@ -204,32 +210,32 @@
 	MapAnnotation *myAnnotation = [[MapAnnotation alloc] init];
 	
 	myAnnotation.coordinate = theCoordinate;
-	myAnnotation.title = @"George Mason (FFX Campus)";
-	myAnnotation.subtitle = @"22030";
+	myAnnotation.subtitle = @"George Mason (FFX Campus)";
+	myAnnotation.title = @"22030";
 	
 	MapAnnotation *myAnnotation1 = [[MapAnnotation alloc] init];
 	
 	myAnnotation1.coordinate = theCoordinate1;
-	myAnnotation1.title = @"George Mason (PW Campus)";
-	myAnnotation1.subtitle = @"20110";
+	myAnnotation1.subtitle = @"George Mason (PW Campus)";
+	myAnnotation1.title = @"20110";
 	
 	MapAnnotation *myAnnotation2 = [[MapAnnotation alloc] init];
 	
 	myAnnotation2.coordinate = theCoordinate2;
-	myAnnotation2.title = @"Walt Disney World";
-	myAnnotation2.subtitle = @"32836";
+	myAnnotation2.subtitle = @"Walt Disney World";
+	myAnnotation2.title = @"32836";
 	
 	MapAnnotation *myAnnotation3 = [[MapAnnotation alloc] init];
 	
 	myAnnotation3.coordinate = theCoordinate3;
-	myAnnotation3.title = @"Disneyland";
-	myAnnotation3.subtitle = @"92805";
+	myAnnotation3.subtitle = @"Disneyland";
+	myAnnotation3.title = @"92805";
 	
 	MapAnnotation *myAnnotation4 = [[MapAnnotation alloc] init];
 	
 	myAnnotation4.coordinate = theCoordinate4;
-	myAnnotation4.title = @"Las Vegas";
-	myAnnotation4.subtitle = @"89109";
+	myAnnotation4.subtitle = @"Las Vegas";
+	myAnnotation4.title = @"89109";
 	
 	
 	[mapview addAnnotation:myAnnotation];
@@ -273,12 +279,12 @@
 			// Set the button as the callout view
 			retval.leftCalloutAccessoryView = myDetailButton;
 			
-			
 			UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:self
-                            action:@selector(showDetails:)
-                  forControlEvents:UIControlEventTouchUpInside];
-            retval.rightCalloutAccessoryView = rightButton;
+			[rightButton setTitle:annotation.title forState:UIControlStateNormal];
+			[rightButton addTarget:self
+							action:@selector(showDetails:)
+				  forControlEvents:UIControlEventTouchUpInside];
+			retval.rightCalloutAccessoryView = rightButton;
 		}
 		
 		// Set a bunch of other stuff

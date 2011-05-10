@@ -13,6 +13,7 @@
 
 @synthesize forecasts;
 @synthesize responseData;
+@synthesize zipcode;
 
 @synthesize nowLocation;
 @synthesize nowLabel;
@@ -54,7 +55,7 @@
     NSLog(@"location = %@", newLocation);   
     NSString *baseURl = @"http://free.worldweatheronline.com/feed/weather.ashx";
     NSString *urlStr = [baseURl stringByAppendingFormat:@"?q=%@&format=json&num_of_days=5&key=%@",
-						@"22015",
+						zipcode,
                         @"56891fc26c192034111404"];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -68,6 +69,13 @@
 {
     [super viewDidLoad];
     
+
+	
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSURL *url = [NSURL URLWithString:
                   @"http://free.worldweatheronline.com/feed/weather.ashx?q=[ZIPCODE]&format=json&num_of_days=5&key=[56891fc26c192034111404]"];
@@ -78,20 +86,14 @@
 	// Initialize the forecasts array
 	self.forecasts = [NSArray array];
 	// Set the title that shows in the navigation bar
-	self.title = @"5 Day Forecast";
+	//self.title = @"5 Day Forecast";
     
     
     if ([CLLocationManager locationServicesEnabled]) {
         CLLocationManager *manager = [[CLLocationManager alloc] init];
         manager.delegate = self;
-        [manager startUpdatingLocation];
+       [manager startUpdatingLocation];
     }
-	
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated

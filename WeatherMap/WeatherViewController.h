@@ -13,6 +13,7 @@
 @interface WeatherViewController : UIViewController  <CLLocationManagerDelegate> {
 	NSMutableData *responseData; 
 	NSArray *forecasts;
+	NSString *zipcode;
 	
 	//current info
 	UILabel *nowLocation;
@@ -45,6 +46,7 @@
 }
 @property (nonatomic, retain)  NSArray *forecasts;
 @property (nonatomic, retain)  NSMutableData *responseData;
+@property (nonatomic, retain) NSString *zipcode;
 
 //current info
 @property (nonatomic, retain)  IBOutlet UILabel *nowLocation;
