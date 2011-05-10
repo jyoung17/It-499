@@ -40,7 +40,9 @@
 //set the action for tapping add button 
 -(IBAction)HandleAddTapped;
 -(IBAction)HandleEditTapped;
-
+-(IBAction)HandleMap;
+-(IBAction)HandleHybrid;
+-(IBAction)HandleSat;
 
 // added by Jack
 - (IBAction) showalert;  // alert

@@ -17,13 +17,12 @@
 	location *editingLocation;
 	NSMutableArray *locArray;
 	UITableViewCell *nibLoadedCell;
+	UIButton *addButton;
 	
 }
 
 //set the outlet
 @property(nonatomic, retain) IBOutlet LocationEditorViewController *editor;
-
-
 @property(nonatomic, retain) IBOutlet UITableViewCell *nibLoadedCell;
 
 //set the action for tapping add button

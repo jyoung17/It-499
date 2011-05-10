@@ -51,6 +51,17 @@
     }
 }
 
+-(IBAction)HandleMap{
+	 mapview.mapType = MKMapTypeStandard;
+};
+-(IBAction)HandleHybrid{
+	mapview.mapType = MKMapTypeHybrid;
+
+};
+-(IBAction)HandleSat{
+	 mapview.mapType = MKMapTypeSatellite;
+};
+
 //added by Jack
 // this allows you to change the map type. ie. standard, satellite, hybrid.
 -(IBAction)setMap:(id)sender {
@@ -134,7 +145,7 @@
 - (void)showDetails:(id)sender
 {
     // the detail view does not want a toolbar so hide it
-    [self.navigationController setToolbarHidden:YES animated:NO];
+   // [self.navigationController setToolbarHidden:YES animated:NO];
     
     [self.navigationController pushViewController:weatherView animated:YES];
 }
@@ -158,6 +169,7 @@
 	
 	mapview.showsUserLocation = YES;
 	
+	//[self.navigationController setToolbarHidden:YES];
 	
 	CLLocation *userLoc = mapview.userLocation.location;
 	CLLocationCoordinate2D userCoordinate = userLoc.coordinate;
@@ -216,7 +228,6 @@
 	myAnnotation4.coordinate = theCoordinate4;
 	myAnnotation4.title = @"Las Vegas";
 	myAnnotation4.subtitle = @"89109";
-	
 	
 	
 	[mapview addAnnotation:myAnnotation];
@@ -311,17 +322,20 @@
 	location *newLocation = [[location alloc] init];
 	editingLocation = newLocation;
 	editor.loc = editingLocation;
-	[self.navigationController pushViewController:editor animated:YES];
+	
+	//HOW DO I DO THIS?!?!?
+	
 	//update UITableView (in background) with new member
-	[locationsArray addObject: newLocation];
-	NSIndexPath *newLocationPath =
-	[NSIndexPath indexPathForRow: [locationsArray count]-1 inSection:0];
-	NSArray *newLocationPaths = [NSArray arrayWithObject:newLocationPath];
-	[listview.tableView insertRowsAtIndexPaths:newLocationPaths withRowAnimation:NO];
+	//[locationsArray addObject: newLocation];
+	//NSIndexPath *newLocationPath =
+	//[NSIndexPath indexPathForRow: [locationsArray count]-1 inSection:0];
+	//NSArray *newLocationPaths = [NSArray arrayWithObject:newLocationPath];
+	//[listview.tableView insertRowsAtIndexPaths:newLocationPaths withRowAnimation:NO];
 	[newLocation release];
 }
 
 -(IBAction)HandleEditTapped {
+	
 	[self.navigationController pushViewController:listview animated:YES];
 	
 }

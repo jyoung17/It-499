@@ -41,6 +41,8 @@ NSString *testData[][2]={
 	// Set the title that shows in the navigation bar
 	self.title = @"Map List";
 	
+	[self.navigationController setToolbarHidden:NO];
+	
 	[self loadTestData];
 }
 
@@ -111,8 +113,7 @@ NSString *testData[][2]={
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	editingLocation = [locArray objectAtIndex:indexPath.row];
 	editor.loc = editingLocation;
 	[self.navigationController pushViewController:editor animated:YES];
