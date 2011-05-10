@@ -116,7 +116,7 @@
     [self.mapview setRegion:newRegion animated:YES];
 }
 
-- (void)gotodisneyworld{
+- (void)gotodisneyland{
 	// start off by default at jacks house
 	MKCoordinateRegion newRegion;
     newRegion.center.latitude = 33.83235;
