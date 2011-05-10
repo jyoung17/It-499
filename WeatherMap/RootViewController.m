@@ -13,10 +13,124 @@
 
 @implementation RootViewController
 
-@synthesize mapview, mapAnnotations, listview, editor, weatherView;
+@synthesize mapview, mapAnnotations, listview, editor, weatherView, choicelabel, alertbutton; 
+
+//added by Jack 
+-(IBAction)showalert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finder" message:@"Click Something" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Zoom Focus", @"GMU FX", @"GMU PW", @"Disneyland", @"Las Vegas", nil];
+    [alert show];
+    [alert release];
+}
+
+//added by Jack
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) 
+    {
+        //this is where the cancel action goes.
+    }
+    if (buttonIndex == 1) 
+    {
+        [self gotostandardview]; // zoom focus. 
+    }    
+    if (buttonIndex == 2) 
+    {
+        [self gotoGeorgeMasonCampus]; //gmu fx zoom to
+    }
+    
+    if (buttonIndex == 3) 
+    {
+        [self gotoPrinceWilliamCampus]; //gmu pw zoom to
+    }
+    if (buttonIndex == 4) 
+    {
+        [self gotodisneyland]; //disneyland zoom to
+    }
+    if (buttonIndex == 5) 
+    {
+        [self gotoVegas]; // vegas zoom to
+    }
+}
+
+//added by Jack
+// this allows you to change the map type. ie. standard, satellite, hybrid.
+-(IBAction)setMap:(id)sender {
+    switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
+        case 0:
+            mapview.mapType = MKMapTypeStandard;
+            break;
+        case 1:
+            mapview.mapType = MKMapTypeSatellite;
+            break;
+        case 2:
+            mapview.mapType = MKMapTypeHybrid;
+            break;    
+        default:
+            break;
+    }
+}
+
+//added by Jack
+- (void)gotoGeorgeMasonCampus
+{
+    // start off by default in george mason campus
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 38.835096;
+    newRegion.center.longitude = -77.3108712;
+    newRegion.span.latitudeDelta = 0.112872;
+    newRegion.span.longitudeDelta = 0.109863;
+    [self.mapview setRegion:newRegion animated:YES];
+}
+
+//added by Jack
+- (void)gotoPrinceWilliamCampus
+{
+    // start off by default in prince william campus
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 38.754537;
+    newRegion.center.longitude = -77.520816;
+    newRegion.span.latitudeDelta = 0.112872;
+    newRegion.span.longitudeDelta = 0.109863;
+    [self.mapview setRegion:newRegion animated:YES];
+}
+
+//added by Jack
+- (void)gotoVegas
+{
+    // start off by default at jacks house
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 36.101909;
+    newRegion.center.longitude = -115.168436;
+    newRegion.span.latitudeDelta = 0.112872;
+    newRegion.span.longitudeDelta = 0.109863;
+    [self.mapview setRegion:newRegion animated:YES];
+}
 
 
+//added by Jack
+- (void)gotodisneyland
+{
+    // start off by default at jacks house
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 28.371054;
+    newRegion.center.longitude = -81.545986;
+    newRegion.span.latitudeDelta = 0.112872;
+    newRegion.span.longitudeDelta = 0.109863;
+    [self.mapview setRegion:newRegion animated:YES];
+}
 
+//added by Jack
+- (void)gotostandardview
+{
+    // zoom out if they select cancel
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 38.835096;
+    newRegion.center.longitude = -77.3108712;
+    newRegion.span.latitudeDelta = 65.112872;
+    newRegion.span.longitudeDelta = 55.109863;
+    [self.mapview setRegion:newRegion animated:YES];
+}
+
+//added by Jack
 - (void)showDetails:(id)sender
 {
     // the detail view does not want a toolbar so hide it
@@ -25,6 +139,7 @@
     [self.navigationController pushViewController:weatherView animated:YES];
 }
 
+//added by Jack
 -(void)goToLocations{
 	
 	MKCoordinateRegion newRegion;
