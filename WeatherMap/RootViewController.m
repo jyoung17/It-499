@@ -17,7 +17,7 @@
 
 //added by Jack 
 -(IBAction)showalert {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Finder" message:@"Click Something" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Zoom Focus", @"GMU FX", @"GMU PW", @"Disneyland", @"Las Vegas", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Zoom Focus", @"GMU FX", @"GMU PW", @"Disneyland", @"Las Vegas", nil];
     [alert show];
     [alert release];
 }
@@ -41,7 +41,7 @@
     {
         [self gotoPrinceWilliamCampus]; //gmu pw zoom to
     }
-    if (buttonIndex == 4) 
+	if (buttonIndex == 4) 
     {
         [self gotodisneyland]; //disneyland zoom to
     }
@@ -116,18 +116,17 @@
     [self.mapview setRegion:newRegion animated:YES];
 }
 
-
-//added by Jack
-- (void)gotodisneyland
-{
-    // start off by default at jacks house
-    MKCoordinateRegion newRegion;
-    newRegion.center.latitude = 28.371054;
-    newRegion.center.longitude = -81.545986;
+- (void)gotodisneyworld{
+	// start off by default at jacks house
+	MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 33.83235;
+    newRegion.center.longitude = -117.907039;
     newRegion.span.latitudeDelta = 0.112872;
     newRegion.span.longitudeDelta = 0.109863;
     [self.mapview setRegion:newRegion animated:YES];
 }
+
+
 
 //added by Jack
 - (void)gotostandardview

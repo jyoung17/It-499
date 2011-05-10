@@ -55,6 +55,7 @@
 - (void)gotoGeorgeMasonCampus;
 - (void)gotoVegas;
 - (void)gotodisneyland;
+- (void)gotodisneyworld;
 - (void)gotoPrinceWilliamCampus;
 - (void)gotostandardview;
 
