@@ -7,117 +7,165 @@
 //
 
 #import "RootViewController.h"
+#import "MapAnnotation.h"
+#import "location.h"
+#import "LocationEditorViewController.h"
 
 @implementation RootViewController
 
+@synthesize mapview, mapAnnotations, listview, editor, weatherView;
+
+
+
+- (void)showDetails:(id)sender
+{
+    // the detail view does not want a toolbar so hide it
+    [self.navigationController setToolbarHidden:YES animated:NO];
+    
+    [self.navigationController pushViewController:weatherView animated:YES];
+}
+
+-(void)goToLocations{
+	
+	MKCoordinateRegion newRegion;
+	newRegion.center.latitude = 37.786996;
+	newRegion.center.longitude = -122.440100;
+	newRegion.span.latitudeDelta = 0.112872;
+	newRegion.span.longitudeDelta = 0.109863;
+	
+	[self.mapview setRegion:newRegion animated:YES];
+}
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
+	
+	mapview.showsUserLocation = YES;
+	
+	
+	CLLocation *userLoc = mapview.userLocation.location;
+	CLLocationCoordinate2D userCoordinate = userLoc.coordinate;
+	
+	mapview.delegate = self;
+	
+	NSMutableArray *annotations = [[NSMutableArray alloc]init];
+	
+	CLLocationCoordinate2D theCoordinate;
+	theCoordinate.latitude = 38.848467;
+	theCoordinate.longitude = -77.334439;
+	
+	CLLocationCoordinate2D theCoordinate1;
+	theCoordinate1.latitude = 38.75107;
+	theCoordinate1.longitude = -77.477959;
+	
+	CLLocationCoordinate2D theCoordinate2;
+	theCoordinate2.latitude = 28.415247;
+	theCoordinate2.longitude = -81.509718;
+	
+	CLLocationCoordinate2D theCoordinate3;
+	theCoordinate3.latitude = 33.83235;
+	theCoordinate3.longitude = -117.907039;
+	
+	CLLocationCoordinate2D theCoordinate4;
+	theCoordinate4.latitude = 36.12012;
+	theCoordinate4.longitude = -115.166039;
+	
+	
+	MapAnnotation *myAnnotation = [[MapAnnotation alloc] init];
+	
+	myAnnotation.coordinate = theCoordinate;
+	myAnnotation.title = @"George Mason (FFX Campus)";
+	myAnnotation.subtitle = @"22030";
+	
+	MapAnnotation *myAnnotation1 = [[MapAnnotation alloc] init];
+	
+	myAnnotation1.coordinate = theCoordinate1;
+	myAnnotation1.title = @"George Mason (PW Campus)";
+	myAnnotation1.subtitle = @"20110";
+	
+	MapAnnotation *myAnnotation2 = [[MapAnnotation alloc] init];
+	
+	myAnnotation2.coordinate = theCoordinate2;
+	myAnnotation2.title = @"Walt Disney World";
+	myAnnotation2.subtitle = @"32836";
+	
+	MapAnnotation *myAnnotation3 = [[MapAnnotation alloc] init];
+	
+	myAnnotation3.coordinate = theCoordinate3;
+	myAnnotation3.title = @"Disneyland";
+	myAnnotation3.subtitle = @"92805";
+	
+	MapAnnotation *myAnnotation4 = [[MapAnnotation alloc] init];
+	
+	myAnnotation4.coordinate = theCoordinate4;
+	myAnnotation4.title = @"Las Vegas";
+	myAnnotation4.subtitle = @"89109";
+	
+	
+	
+	[mapview addAnnotation:myAnnotation];
+	[mapview addAnnotation:myAnnotation1];
+	[mapview addAnnotation:myAnnotation2];
+	[mapview addAnnotation:myAnnotation3];
+	[mapview addAnnotation:myAnnotation4];
+	
+	[annotations addObject:myAnnotation];
+	[annotations addObject:myAnnotation1];
+	[annotations addObject:myAnnotation2];
+	[annotations addObject:myAnnotation3];
+	[annotations addObject:myAnnotation4];
+	
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+	static NSString *defaultPinID = @"MapAnnotation";
+	MKPinAnnotationView *retval = nil;
+	
+	// Make sure we only create Pins for the Cameras. Ignore the current location annotation 
+	// so it returns the 'blue dot'
+	if ([annotation isMemberOfClass:[MapAnnotation class]]) {
+		// See if we can reduce, reuse, recycle
+		(MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:defaultPinID];
+		
+		// If we have to, create a new view
+		if (retval == nil) {
+			retval = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:defaultPinID] autorelease];
+			
+			// Set up the Left callout
+			UIButton *myDetailButton = [UIButton buttonWithType:UIButtonTypeCustom];
+			myDetailButton.frame = CGRectMake(0, 0, 23, 23);
+			myDetailButton.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+			myDetailButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+			
+			// Set the image for the button
+			[myDetailButton setImage:[UIImage imageNamed:@"YAGlobe.png"] forState:UIControlStateNormal];
+			
+			// Set the button as the callout view
+			retval.leftCalloutAccessoryView = myDetailButton;
+			
+			
+			UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [rightButton addTarget:self
+                            action:@selector(showDetails:)
+                  forControlEvents:UIControlEventTouchUpInside];
+            retval.rightCalloutAccessoryView = rightButton;
+		}
+		
+		// Set a bunch of other stuff
+		if (retval) {
+			[retval setPinColor:MKPinAnnotationColorGreen];
+			retval.animatesDrop = YES;
+			retval.canShowCallout = YES;
+		}
+	}
+	
+	return retval;
+}
+
+- (void)dealloc
 {
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-/*
- // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
- */
-
-// Customize the number of sections in the table view.
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 0;
-}
-
-// Customize the appearance of table view cells.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-
-    // Configure the cell.
-    return cell;
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    else if (editingStyle == UITableViewCellEditingStyleInsert)
-    {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-	*/
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -125,20 +173,42 @@
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
-    // Relinquish ownership any cached data, images, etc that aren't in use.
+    // Release any cached data, images, etc that aren't in use.
 }
+
+#pragma mark - View lifecycle
+
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
+	
 }
 
-- (void)dealloc
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    [super dealloc];
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+-(IBAction)HandleAddTapped {
+	location *newLocation = [[location alloc] init];
+	editingLocation = newLocation;
+	editor.loc = editingLocation;
+	[self.navigationController pushViewController:editor animated:YES];
+	//update UITableView (in background) with new member
+	[locationsArray addObject: newLocation];
+	NSIndexPath *newLocationPath =
+	[NSIndexPath indexPathForRow: [locationsArray count]-1 inSection:0];
+	NSArray *newLocationPaths = [NSArray arrayWithObject:newLocationPath];
+	[listview.tableView insertRowsAtIndexPaths:newLocationPaths withRowAnimation:NO];
+	[newLocation release];
+}
+
+-(IBAction)HandleEditTapped {
+	[self.navigationController pushViewController:listview animated:YES];
+	
 }
 
 @end

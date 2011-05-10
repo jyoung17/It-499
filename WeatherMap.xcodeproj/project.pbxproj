@@ -16,6 +16,19 @@
 		0F6F2A441369F50400B96337 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F2A421369F50400B96337 /* MainWindow.xib */; };
 		0F6F2A471369F50400B96337 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6F2A461369F50400B96337 /* RootViewController.m */; };
 		0F6F2A4A1369F50400B96337 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F6F2A481369F50400B96337 /* RootViewController.xib */; };
+		9C8C4DD21378B27B001E065B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8C4DD11378B27B001E065B /* CoreLocation.framework */; };
+		9C8C4DD41378B285001E065B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8C4DD31378B285001E065B /* MapKit.framework */; };
+		9C8C4DD61378B28B001E065B /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8C4DD51378B28B001E065B /* YAJLiOS.framework */; };
+		9C8C4DF51378B332001E065B /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C4DF41378B332001E065B /* MapAnnotation.m */; };
+		9C8C4DFB1378B35A001E065B /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C4DFA1378B35A001E065B /* WeatherViewController.m */; };
+		9C8C4E021378B60E001E065B /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C4E011378B60E001E065B /* WeatherViewController.xib */; };
+		9C8C4E041378B61E001E065B /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C4E031378B61E001E065B /* TableViewController.xib */; };
+		9C8C4E061378B62D001E065B /* LocationEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C4E051378B62D001E065B /* LocationEditorViewController.xib */; };
+		9C8C4E081378B638001E065B /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C4E071378B638001E065B /* TableCell.xib */; };
+		9C8C4E221378B747001E065B /* YAGlobe.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C8C4E211378B747001E065B /* YAGlobe.png */; };
+		9C8C4E391378BB8A001E065B /* location.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C4E341378BB8A001E065B /* location.m */; };
+		9C8C4E3A1378BB8A001E065B /* LocationEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C4E361378BB8A001E065B /* LocationEditorViewController.m */; };
+		9C8C4E3B1378BB8A001E065B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8C4E381378BB8A001E065B /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +46,24 @@
 		0F6F2A451369F50400B96337 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		0F6F2A461369F50400B96337 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0F6F2A491369F50400B96337 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		9C8C4DD11378B27B001E065B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9C8C4DD31378B285001E065B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9C8C4DD51378B28B001E065B /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLiOS.framework; sourceTree = "<group>"; };
+		9C8C4DF31378B332001E065B /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		9C8C4DF41378B332001E065B /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		9C8C4DF91378B35A001E065B /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		9C8C4DFA1378B35A001E065B /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		9C8C4E011378B60E001E065B /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		9C8C4E031378B61E001E065B /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		9C8C4E051378B62D001E065B /* LocationEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationEditorViewController.xib; sourceTree = "<group>"; };
+		9C8C4E071378B638001E065B /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		9C8C4E211378B747001E065B /* YAGlobe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YAGlobe.png; sourceTree = "<group>"; };
+		9C8C4E331378BB8A001E065B /* location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = location.h; sourceTree = "<group>"; };
+		9C8C4E341378BB8A001E065B /* location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = location.m; sourceTree = "<group>"; };
+		9C8C4E351378BB8A001E065B /* LocationEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationEditorViewController.h; sourceTree = "<group>"; };
+		9C8C4E361378BB8A001E065B /* LocationEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationEditorViewController.m; sourceTree = "<group>"; };
+		9C8C4E371378BB8A001E065B /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		9C8C4E381378BB8A001E065B /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +74,9 @@
 				0F6F2A311369F50400B96337 /* UIKit.framework in Frameworks */,
 				0F6F2A331369F50400B96337 /* Foundation.framework in Frameworks */,
 				0F6F2A351369F50400B96337 /* CoreGraphics.framework in Frameworks */,
+				9C8C4DD21378B27B001E065B /* CoreLocation.framework in Frameworks */,
+				9C8C4DD41378B285001E065B /* MapKit.framework in Frameworks */,
+				9C8C4DD61378B28B001E065B /* YAJLiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +103,12 @@
 		0F6F2A2F1369F50400B96337 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C8C4DD51378B28B001E065B /* YAJLiOS.framework */,
 				0F6F2A301369F50400B96337 /* UIKit.framework */,
 				0F6F2A321369F50400B96337 /* Foundation.framework */,
 				0F6F2A341369F50400B96337 /* CoreGraphics.framework */,
+				9C8C4DD11378B27B001E065B /* CoreLocation.framework */,
+				9C8C4DD31378B285001E065B /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,10 +118,11 @@
 			children = (
 				0F6F2A3F1369F50400B96337 /* WeatherMapAppDelegate.h */,
 				0F6F2A401369F50400B96337 /* WeatherMapAppDelegate.m */,
-				0F6F2A421369F50400B96337 /* MainWindow.xib */,
-				0F6F2A451369F50400B96337 /* RootViewController.h */,
-				0F6F2A461369F50400B96337 /* RootViewController.m */,
-				0F6F2A481369F50400B96337 /* RootViewController.xib */,
+				9C8C4DFE1378B381001E065B /* Location */,
+				9C8C4DFD1378B36B001E065B /* Map */,
+				9C8C4DFC1378B35E001E065B /* Weather */,
+				9C8C4DFF1378B390001E065B /* Xibs */,
+				9C8C4E201378B72E001E065B /* Images */,
 				0F6F2A371369F50400B96337 /* Supporting Files */,
 			);
 			path = WeatherMap;
@@ -99,6 +137,60 @@
 				0F6F2A3D1369F50400B96337 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C8C4DFC1378B35E001E065B /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				9C8C4DF91378B35A001E065B /* WeatherViewController.h */,
+				9C8C4DFA1378B35A001E065B /* WeatherViewController.m */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
+		9C8C4DFD1378B36B001E065B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9C8C4DF31378B332001E065B /* MapAnnotation.h */,
+				9C8C4DF41378B332001E065B /* MapAnnotation.m */,
+				0F6F2A451369F50400B96337 /* RootViewController.h */,
+				0F6F2A461369F50400B96337 /* RootViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		9C8C4DFE1378B381001E065B /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				9C8C4E331378BB8A001E065B /* location.h */,
+				9C8C4E341378BB8A001E065B /* location.m */,
+				9C8C4E351378BB8A001E065B /* LocationEditorViewController.h */,
+				9C8C4E361378BB8A001E065B /* LocationEditorViewController.m */,
+				9C8C4E371378BB8A001E065B /* TableViewController.h */,
+				9C8C4E381378BB8A001E065B /* TableViewController.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		9C8C4DFF1378B390001E065B /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				0F6F2A421369F50400B96337 /* MainWindow.xib */,
+				0F6F2A481369F50400B96337 /* RootViewController.xib */,
+				9C8C4E011378B60E001E065B /* WeatherViewController.xib */,
+				9C8C4E071378B638001E065B /* TableCell.xib */,
+				9C8C4E031378B61E001E065B /* TableViewController.xib */,
+				9C8C4E051378B62D001E065B /* LocationEditorViewController.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		9C8C4E201378B72E001E065B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9C8C4E211378B747001E065B /* YAGlobe.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +243,11 @@
 				0F6F2A3B1369F50400B96337 /* InfoPlist.strings in Resources */,
 				0F6F2A441369F50400B96337 /* MainWindow.xib in Resources */,
 				0F6F2A4A1369F50400B96337 /* RootViewController.xib in Resources */,
+				9C8C4E021378B60E001E065B /* WeatherViewController.xib in Resources */,
+				9C8C4E041378B61E001E065B /* TableViewController.xib in Resources */,
+				9C8C4E061378B62D001E065B /* LocationEditorViewController.xib in Resources */,
+				9C8C4E081378B638001E065B /* TableCell.xib in Resources */,
+				9C8C4E221378B747001E065B /* YAGlobe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +261,11 @@
 				0F6F2A3E1369F50400B96337 /* main.m in Sources */,
 				0F6F2A411369F50400B96337 /* WeatherMapAppDelegate.m in Sources */,
 				0F6F2A471369F50400B96337 /* RootViewController.m in Sources */,
+				9C8C4DF51378B332001E065B /* MapAnnotation.m in Sources */,
+				9C8C4DFB1378B35A001E065B /* WeatherViewController.m in Sources */,
+				9C8C4E391378BB8A001E065B /* location.m in Sources */,
+				9C8C4E3A1378BB8A001E065B /* LocationEditorViewController.m in Sources */,
+				9C8C4E3B1378BB8A001E065B /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +312,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -234,6 +340,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeatherMap/WeatherMap-Prefix.pch";
@@ -248,6 +358,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeatherMap/WeatherMap-Prefix.pch";
 				INFOPLIST_FILE = "WeatherMap/WeatherMap-Info.plist";

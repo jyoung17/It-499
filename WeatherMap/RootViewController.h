@@ -7,12 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "MapAnnotation.h"
+#import "location.h"
+#import "LocationEditorViewController.h"
+#import "WeatherViewController.h"
+#import "TableViewController.h"
 
-@interface RootViewController : UITableViewController {
-
-    MKmapview *mapview;
+@interface RootViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate> {
+    MKMapView *mapview;
+    CLLocationCoordinate2D *Place;
+	NSMutableArray *mapAnnotations;
+	LocationEditorViewController *editor;
+	location *editingLocation;
+	WeatherViewController *weatherView;
+	TableViewController *listview;
+	NSMutableArray *locationsArray;
+	MapAnnotation *details;
+	
     
 }
+@property (nonatomic, retain) IBOutlet MKMapView *mapview;
+@property (nonatomic, retain) NSMutableArray *mapAnnotations;
+@property(nonatomic, retain) IBOutlet LocationEditorViewController *editor;
+@property(nonatomic, retain) IBOutlet WeatherViewController *weatherView;
+@property(nonatomic, retain) IBOutlet TableViewController *listview;
 
+
+//set the action for tapping add button
+-(IBAction)HandleAddTapped;
+-(IBAction)HandleEditTapped;
 
 @end
