@@ -35,11 +35,8 @@ NSString *testData[][2]={
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.navigationItem.rightBarButtonItem = self.editButtonItem;	
+	self.navigationItem.leftBarButtonItem = self.editButtonItem;	
     locArray = [[NSMutableArray alloc] init];
-	
-	// Set the title that shows in the navigation bar
-	self.title = @"Map List";
 	
 	[self.navigationController setToolbarHidden:NO];
 	
@@ -159,6 +156,11 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 	[newLocation release];
 }
 
+
+//close the location Manager
+-(IBAction)HandleDoneTapped{
+	[self.navigationController popViewControllerAnimated:YES];
+};
 
 //END:code.RootViewController.handleaddtapped
 

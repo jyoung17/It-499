@@ -28,4 +28,6 @@
 //set the action for tapping add button
 -(IBAction)HandleAddTapped;
 
+-(IBAction)HandleDoneTapped;
+
 @end

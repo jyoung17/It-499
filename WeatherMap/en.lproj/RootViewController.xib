@@ -73,21 +73,33 @@
 			<object class="IBUIViewController" id="834501916">
 				<object class="NSMutableArray" key="IBUIToolbarItems">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<object class="IBUIBarButtonItem" id="17585420">
+					<object class="IBUIBarButtonItem" id="768533760">
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<reference key="IBUIToolbar"/>
+						<int key="IBUISystemItemIdentifier">5</int>
+					</object>
+					<object class="IBUIBarButtonItem" id="511490143">
+						<string key="IBUITitle">Done</string>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<float key="IBUIWidth">156</float>
 						<int key="IBUIStyle">1</int>
 						<reference key="IBUIToolbar"/>
-						<int key="IBUISystemItemIdentifier">4</int>
 					</object>
-					<object class="IBUIBarButtonItem" id="357364187">
+					<object class="IBUIBarButtonItem" id="167782756">
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<reference key="IBUIToolbar"/>
 						<int key="IBUISystemItemIdentifier">5</int>
 					</object>
 				</object>
-				<object class="IBUINavigationItem" key="IBUINavigationItem" id="645298272">
+				<object class="IBUINavigationItem" key="IBUINavigationItem" id="1055833347">
 					<reference key="IBUINavigationBar"/>
-					<string key="IBUITitle">Table</string>
+					<string key="IBUITitle">Location Manager</string>
+					<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="631982657">
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIStyle">1</int>
+						<reference key="IBUINavigationItem" ref="1055833347"/>
+						<int key="IBUISystemItemIdentifier">4</int>
+					</object>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				</object>
 				<string key="IBUINibName">TableViewController</string>
@@ -162,10 +174,18 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">HandleAddTapped</string>
-						<reference key="source" ref="17585420"/>
+						<reference key="source" ref="631982657"/>
 						<reference key="destination" ref="834501916"/>
 					</object>
 					<int key="connectionID">47</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">HandleDoneTapped</string>
+						<reference key="source" ref="511490143"/>
+						<reference key="destination" ref="834501916"/>
+					</object>
+					<int key="connectionID">50</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -198,9 +218,10 @@
 						<reference key="object" ref="834501916"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="645298272"/>
-							<reference ref="357364187"/>
-							<reference ref="17585420"/>
+							<reference ref="1055833347"/>
+							<reference ref="167782756"/>
+							<reference ref="511490143"/>
+							<reference ref="768533760"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -228,20 +249,31 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">43</int>
-						<reference key="object" ref="645298272"/>
+						<reference key="object" ref="1055833347"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="631982657"/>
 						</object>
 						<reference key="parent" ref="834501916"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">45</int>
-						<reference key="object" ref="357364187"/>
+						<reference key="object" ref="167782756"/>
 						<reference key="parent" ref="834501916"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
-						<reference key="object" ref="17585420"/>
+						<reference key="object" ref="631982657"/>
+						<reference key="parent" ref="1055833347"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">48</int>
+						<reference key="object" ref="511490143"/>
+						<reference key="parent" ref="834501916"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">49</int>
+						<reference key="object" ref="768533760"/>
 						<reference key="parent" ref="834501916"/>
 					</object>
 				</object>
@@ -257,6 +289,8 @@
 					<string>43.IBPluginDependency</string>
 					<string>45.IBPluginDependency</string>
 					<string>46.IBPluginDependency</string>
+					<string>48.IBPluginDependency</string>
+					<string>49.IBPluginDependency</string>
 					<string>6.CustomClassName</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
@@ -280,11 +314,13 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>WeatherViewController</string>
 					<string>{{312, 265}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>TableViewController</string>
-					<string>{{562, 75}, {320, 480}}</string>
+					<string>{{521, 110}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>LocationEditorViewController</string>
 					<string>{{312, 219}, {320, 480}}</string>
@@ -309,7 +345,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">47</int>
+			<int key="maxID">50</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -504,14 +540,35 @@
 					<string key="className">TableViewController</string>
 					<string key="superclassName">UITableViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">HandleAddTapped</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>HandleAddTapped</string>
+							<string>HandleDoneTapped</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">HandleAddTapped</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">HandleAddTapped</string>
-							<string key="candidateClassName">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>HandleAddTapped</string>
+							<string>HandleDoneTapped</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">HandleAddTapped</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">HandleDoneTapped</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">

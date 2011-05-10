@@ -14,8 +14,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Set the title that shows in the navigation bar
-	self.title = @"Location Manager";
 }
 
 //set the values that need to be edited in the textbox

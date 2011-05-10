@@ -141,7 +141,6 @@
     [self.mapview setRegion:newRegion animated:YES];
 }
 
-//added by Jack
 - (void)showDetails:(id)sender
 {
     // the detail view does not want a toolbar so hide it
@@ -150,7 +149,7 @@
     [self.navigationController pushViewController:weatherView animated:YES];
 }
 
-//added by Jack
+
 -(void)goToLocations{
 	
 	MKCoordinateRegion newRegion;
@@ -168,6 +167,9 @@
 	[super viewDidLoad];
 	
 	mapview.showsUserLocation = YES;
+	
+	//zoom in -- using jack's function
+	[self gotostandardview];
 	
 	//[self.navigationController setToolbarHidden:YES];
 	
@@ -241,6 +243,7 @@
 	[annotations addObject:myAnnotation2];
 	[annotations addObject:myAnnotation3];
 	[annotations addObject:myAnnotation4];
+	
 	
 }
 
