@@ -37,8 +37,7 @@
 @property(nonatomic, retain) IBOutlet TableViewController *listview;
 
 
-//set the action for tapping add button 
--(IBAction)HandleAddTapped;
+//set the action for tapping a button
 -(IBAction)HandleEditTapped;
 -(IBAction)HandleMap;
 -(IBAction)HandleHybrid;
@@ -47,7 +46,7 @@
 // added by Jack
 - (IBAction) showalert;  // alert
 
--(IBAction)setMap:(id)sender;
+//-(IBAction)setMap:(id)sender;
 @property (nonatomic, retain) IBOutlet UILabel *choicelabel; // choice label for switching maps views
 @property (nonatomic, retain) IBOutlet UIButton *alertbutton; //alert button
 

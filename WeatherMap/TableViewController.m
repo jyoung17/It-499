@@ -147,6 +147,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 	editingLocation = newLocation;
 	editor.loc = editingLocation;
 	[self.navigationController pushViewController:editor animated:YES];
+	
 	// update UITableView (in background) with new member
 	[locArray addObject: newLocation];
 	NSIndexPath *newLocationPath =

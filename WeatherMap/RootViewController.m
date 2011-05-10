@@ -64,21 +64,21 @@
 
 //added by Jack
 // this allows you to change the map type. ie. standard, satellite, hybrid.
--(IBAction)setMap:(id)sender {
-    switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
-        case 0:
-            mapview.mapType = MKMapTypeStandard;
-            break;
-        case 1:
-            mapview.mapType = MKMapTypeSatellite;
-            break;
-        case 2:
-            mapview.mapType = MKMapTypeHybrid;
-            break;    
-        default:
-            break;
-    }
-}
+//-(IBAction)setMap:(id)sender {
+   // switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
+        //case 0:
+            //mapview.mapType = MKMapTypeStandard;
+            //break;
+        //case 1:
+            //mapview.mapType = MKMapTypeSatellite;
+            //break;
+        //case 2:
+            //mapview.mapType = MKMapTypeHybrid;
+            //break;    
+        //default:
+            //break;
+    //}
+//}
 
 //added by Jack
 - (void)gotoGeorgeMasonCampus
@@ -320,22 +320,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
--(IBAction)HandleAddTapped {
-	location *newLocation = [[location alloc] init];
-	editingLocation = newLocation;
-	editor.loc = editingLocation;
-	
-	//HOW DO I DO THIS?!?!?
-	
-	//update UITableView (in background) with new member
-	//[locationsArray addObject: newLocation];
-	//NSIndexPath *newLocationPath =
-	//[NSIndexPath indexPathForRow: [locationsArray count]-1 inSection:0];
-	//NSArray *newLocationPaths = [NSArray arrayWithObject:newLocationPath];
-	//[listview.tableView insertRowsAtIndexPaths:newLocationPaths withRowAnimation:NO];
-	[newLocation release];
-}
 
 -(IBAction)HandleEditTapped {
 	
